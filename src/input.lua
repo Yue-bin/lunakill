@@ -49,8 +49,10 @@ end
 ---
 --- 装饰器形式调用示例：
 --- ``` lua
---- m.register(key) ..
---- handler
+--- _ = input.register({ "q", "Q" }) ..
+---     function()
+---         os.exit(0)
+---     end
 --- ```
 --- @param keyname string|string[] 键名，如果不存在则使用原始键值，可以使用字符串或字符串数组注册多个键
 --- @param handler function? 处理函数，如果不提供则以装饰器形式调用
